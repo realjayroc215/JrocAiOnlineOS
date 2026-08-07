@@ -1,0 +1,49 @@
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>J-Roc Sovereign Command Center</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <script src="commander.js"></script>
+</head>
+<body>
+  <h1 class="pulse">🛡 SOVEREIGN COMMAND HUD 🛡</h1>
+  <div class="grid">
+    <div class="panel"><h2>System Status</h2><p>Online</p></div>
+    <div class="panel"><h2>AI Engine</h2><p>Ready</p></div>
+    <div class="panel"><h2>Security</h2><p>Monitoring</p></div>
+    <div class="panel"><h2>Network</h2><p>Scanning</p></div>
+  </div>
+</body>
+</html>
+📄 login.html
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Commander Login</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <h1>Commander Access</h1>
+  <form onsubmit="return checkKey()">
+    <input type="password" id="key" placeholder="Commander Key" />
+    <button>Enter Command Center</button>
+  </form>
+  <script>
+    function checkKey() {
+      if (document.getElementById('key').value === 'JROC-777') {
+        window.location.href = '/index.html';
+      } else {
+        alert('Access Denied');
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
+📄 _redirects
+Code
+/ /login.html 200
